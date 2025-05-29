@@ -6,6 +6,7 @@
 
 class UCameraComponent;
 class USpringArmComponent;
+class UInventory;
 
 UCLASS()
 class SURVIVALCOURSE_API ASurvivalPlayerCharacter : public ACharacter
@@ -27,5 +28,8 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* FollowCamera;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UInventory* InventoryComponent;
 #pragma endregion
 };

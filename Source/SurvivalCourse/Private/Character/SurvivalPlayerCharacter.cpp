@@ -2,6 +2,7 @@
 
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/Inventory.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 
@@ -27,6 +28,8 @@ ASurvivalPlayerCharacter::ASurvivalPlayerCharacter()
 	GetCharacterMovement()->bOrientRotationToMovement = false;
 	GetCharacterMovement()->bUseControllerDesiredRotation = true;
 	GetCharacterMovement()->MaxWalkSpeed = 600.f;
+
+	InventoryComponent = CreateDefaultSubobject<UInventory>(TEXT("InventoryComponent"));
 	
 }
 
